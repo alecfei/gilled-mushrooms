@@ -2,4 +2,4 @@ This dataset includes descriptions of hypothetical samples corresponding to 23 s
 
 Seaborn and matplotlib are used for visualisation.
 
-Analysis using R is practiced also.
+Analysis using R by Rstudio is practiced also.
