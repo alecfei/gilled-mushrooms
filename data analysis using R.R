@@ -98,4 +98,12 @@ for (col in colnames(mushroom)) {
   print(table(mushroom[[col]]))
 }
 
-
+# Practice visualisation
+install.packages("ggplot2")
+library("ggplot2")
+ggplot(mushroom, aes(x = class)) +
+  geom_bar(fill = "blue", 
+           color = "black") +
+  labs(x = "Class", 
+       y = "Count", 
+       title = "Frequency of the classes in gilled mushrooms")
