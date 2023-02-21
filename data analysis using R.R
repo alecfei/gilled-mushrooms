@@ -22,7 +22,7 @@ mushroom <- mutate(mushroom,
                                   )
                    )
 
-mushroom %>%
+mushroom <- mushroom %>%
   mutate(cap.shape = recode(cap.shape, "b" = "bell", "c" = "conical", "x" = "convex", 
                             "f" = "flat", "k" = "knobbed", "s" = "sunken"), 
          cap.surface = recode(cap.surface, "f" = "fibrous", "g" = "grooves", 
@@ -74,7 +74,9 @@ mushroom %>%
                              "n" = "numerous", "s" = "scattered", 
                              "v" = "several", "y" = "solitary"),
          habitat = recode(habitat, "g" = "grasses", "l" = "leaves", "m" = "meadows", 
-                          "p" = "paths", "u" = "urban", "w" = "waste", "d" = "woods"),
+                          "p" = "paths", "u" = "urban", "w" = "waste", "d" = "woods")
          )
 
-#
+# Check dataset
+View(mushroom)
+
