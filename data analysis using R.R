@@ -8,10 +8,10 @@ mushroom <- read.csv("mushrooms.csv", sep = ",")
 View(mushroom)
 
 # Create a new varible that only contains mushrooms that is edible
-mushroom_edible = mushroom[mushroom$class == "e",]
+#mushroom_edible = mushroom[mushroom$class == "e",]
 
 # Check edible mushrooms
-View(mushroom_edible)
+#View(mushroom_edible)
 
 #Change the values into more meaningful ones
 library(dplyr)
@@ -79,4 +79,23 @@ mushroom <- mushroom %>%
 
 # Check dataset
 View(mushroom)
+
+# Install library
+#install.packages("data.table")
+library("data.table")
+
+# Check data description
+summary(mushroom)
+
+# Check the first few rows
+head(mushroom)
+
+# Check the structure
+str(mushroom)
+
+# Check the frequency of all unique values in each column
+for (col in colnames(mushroom)) {
+  print(table(mushroom[[col]]))
+}
+
 
