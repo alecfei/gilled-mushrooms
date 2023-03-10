@@ -99,7 +99,7 @@ for (col in colnames(mushroom)) {
 }
 
 # Practice visualisation
-install.packages("ggplot2")
+#install.packages("ggplot2")
 library("ggplot2")
 ggplot(mushroom, aes(x = class)) +
   geom_bar(fill = "blue", 

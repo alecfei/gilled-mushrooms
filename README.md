@@ -2,6 +2,6 @@ This dataset includes descriptions of hypothetical samples corresponding to 23 s
 
 Seaborn and matplotlib are used for visualisation.
 
-Visualisation of the information in each column is presented using python.
+Visualisation of each feature is presented using python.
 
-Analysis via R programming using RStudio is practised.
+Analysis using R programming through RStudio is practised, i.e. machine learing
