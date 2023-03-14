@@ -39,6 +39,15 @@ library(caTools)
 library(ggplot2)
 library(cowplot)
 
+## Set seed
+set.seed(42)
+
+## Create model
+model <- randomForest(classes ~ ., data = mushroom_ml,
+                      proximity = TRUE)
+model
+
+
 ## Split the dataset into train and test sets
 split <- sample.split(mushroom_ml, SplitRatio = 0.75)
 split
@@ -46,7 +55,6 @@ train <- subset(mushroom_ml, split == "TRUE")
 test <- subset(mushroom_ml, split == "FALSE")
 
 # Fitting Random Forest to the train dataset
-set.seed(120)  # setting seed
 rf <- randomForest(x = train[-1],
                    y = train$classes,
                    ntree = 500)
